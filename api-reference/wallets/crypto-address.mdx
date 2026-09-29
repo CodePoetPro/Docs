@@ -2,8 +2,15 @@
 title: "Generate Crypto Address"
 sidebarTitle: "Generate Crypto Address"
 api: "POST /v1/wallets/crypto-address"
-description: "Generate or retrieve a dedicated multi-chain cryptocurrency deposit address."
+description: "Generate or retrieve a dedicated multi-chain cryptocurrency deposit address (Deprecated)."
+deprecated: true
 ---
+
+<Warning>
+  **Endpoint Deprecated**
+
+  This endpoint is deprecated and no longer supported. Any requests made to `POST /v1/wallets/crypto-address` will return an HTTP `410 Gone` error.
+</Warning>
 
 Generates or fetches the merchant's dedicated cryptocurrency deposit address for the specified blockchain network.
 
@@ -78,7 +85,15 @@ print(response.json())
 </RequestExample>
 
 <ResponseExample>
-```json 201 Created
+```json 410 Gone
+{
+  "statusCode": 410,
+  "message": "The /v1/wallets/crypto-address endpoint is deprecated and no longer supported.",
+  "error": "Gone"
+}
+```
+
+```json 201 Created (Historical)
 {
   "network": "TRON",
   "asset": "USDT",

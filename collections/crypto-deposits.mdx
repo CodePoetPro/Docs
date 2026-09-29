@@ -25,6 +25,12 @@ When requesting a crypto deposit address, specify one of the following supported
 
 ## Generating a deposit address
 
+<Warning>
+  **Endpoint Deprecated**
+
+  The `POST /v1/wallets/crypto-address` endpoint has been deprecated and is no longer supported (returns HTTP `410 Gone`). Multi-chain deposit addresses can be generated and managed directly via the merchant dashboard.
+</Warning>
+
 Call `POST /v1/wallets/crypto-address` with the desired network code:
 
 <CodeGroup>
